@@ -1,5 +1,8 @@
 package com.github.dyx182.selenian_kit.dto;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.ex.ElementNotFound;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,22 +15,33 @@ public class CheckboxStateDTO {
     boolean isDisplayed;
 
     String text;
-    String validationMessage;
+    String labelText;
     String id;
     String name;
     String ariaLabel;
-
     String color;
     String backgroundColor;
     String borderColor;
-    String checkmarkColor;
+    String attribute;
+    String cssValue;
 
-    int wight;
+    int width;
     int height;
     int x;
     int y;
 
     public boolean isChecked() {
-        return isDisplayed;
+        return isSelected;
+    }
+
+    public static String getLabelText(SelenideElement checkbox) {
+        String id = checkbox.getAttribute("id");
+        if (id != null) {
+            try {
+                return Selenide.$("label[for='" + id + "']").getText();
+            } catch (ElementNotFound e) {
+            }
+        }
+        return "";
     }
 }
