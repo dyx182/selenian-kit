@@ -1,11 +1,15 @@
 package com.github.dyx182.selenian_kit;
 
-import com.github.dyx182.selenian_kit.api.CheckboxState;
-import com.github.dyx182.selenian_kit.api.ElementState;
+import com.codeborne.selenide.SelenideElement;
+import com.github.dyx182.selenian_kit.dto.CheckboxStateDTO;
+
 
 public class SelenianKit {
 
-    public static ElementState checkboxState() {
-        return new CheckboxState();
+    private SelenianKit() {}
+
+    public static CheckboxStateDTO getCheckboxState(SelenideElement element) {
+        return CheckboxState.getState(element);
+
     }
 }
