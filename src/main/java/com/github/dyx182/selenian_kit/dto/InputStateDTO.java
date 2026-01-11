@@ -7,15 +7,12 @@ import lombok.experimental.SuperBuilder;
 @Value
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
-public class CheckboxStateDTO extends BaseElementStateDTO{
-
-    boolean isSelected;
+public class InputStateDTO extends BaseElementStateDTO{
     boolean isEnabled;
-    String labelText;
     String name;
+    String value;
+    String placeholder;
+    String type;
     String ariaLabel;
 
-    public boolean isChecked() {
-        return isSelected;
-    }
 }
