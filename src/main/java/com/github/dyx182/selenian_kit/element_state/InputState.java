@@ -1,7 +1,7 @@
-package com.github.dyx182.selenian_kit;
+package com.github.dyx182.selenian_kit.element_state;
 
 import com.codeborne.selenide.SelenideElement;
-import com.github.dyx182.selenian_kit.dto.InputStateDTO;
+import com.github.dyx182.selenian_kit.element_state.dto.InputStateDTO;
 
 class InputState {
 

@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.dto;
+package com.github.dyx182.selenian_kit.element_state.dto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Value;
@@ -7,15 +7,11 @@ import lombok.experimental.SuperBuilder;
 @Value
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
-public class CheckboxStateDTO extends BaseElementStateDTO{
-
-    boolean isSelected;
+public class ButtonStateDTO extends BaseElementStateDTO {
     boolean isEnabled;
-    String labelText;
+    String type;
     String name;
+    String value;
     String ariaLabel;
-
-    public boolean isChecked() {
-        return isSelected;
-    }
+    String form;
 }

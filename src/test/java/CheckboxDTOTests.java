@@ -1,5 +1,5 @@
 
-import com.github.dyx182.selenian_kit.SelenianKit;
+import com.github.dyx182.selenian_kit.element_state.ElementState;
 import org.junit.jupiter.api.Test;
 
 

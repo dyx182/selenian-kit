@@ -1,9 +1,9 @@
-package com.github.dyx182.selenian_kit;
+package com.github.dyx182.selenian_kit.element_state;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.ex.ElementNotFound;
-import com.github.dyx182.selenian_kit.dto.CheckboxStateDTO;
+import com.github.dyx182.selenian_kit.element_state.dto.CheckboxStateDTO;
 
 class CheckboxState {
 

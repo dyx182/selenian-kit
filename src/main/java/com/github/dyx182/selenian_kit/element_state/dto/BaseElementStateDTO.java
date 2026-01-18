@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.dto;
+package com.github.dyx182.selenian_kit.element_state.dto;
 
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;

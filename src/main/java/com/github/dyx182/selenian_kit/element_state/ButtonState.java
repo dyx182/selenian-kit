@@ -1,11 +1,11 @@
-package com.github.dyx182.selenian_kit;
+package com.github.dyx182.selenian_kit.element_state;
 
 import com.codeborne.selenide.SelenideElement;
-import com.github.dyx182.selenian_kit.dto.ButtonStateDTO;
+import com.github.dyx182.selenian_kit.element_state.dto.ButtonStateDTO;
 
-public class ButtonState {
+class ButtonState {
 
-    static ButtonStateDTO buttonState(SelenideElement button) {
+    static ButtonStateDTO getState(SelenideElement button) {
         return ButtonStateDTO.builder()
                 .isDisplayed(button.isDisplayed())
                 .text(button.getText())
