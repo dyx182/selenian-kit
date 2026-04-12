@@ -1,10 +1,12 @@
 package com.github.dyx182.selenian_kit.element_state.dto;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
 @Getter
 @SuperBuilder
+@EqualsAndHashCode
 public class BaseElementStateDTO {
 
     boolean isDisplayed;

@@ -14,5 +14,4 @@ public class InputStateDTO extends BaseElementStateDTO{
     String placeholder;
     String type;
     String ariaLabel;
-
 }
