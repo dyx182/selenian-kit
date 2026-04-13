@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class InputDTOTests {
 
+    //todo add negative tests
     @Test
     public void buildingInputStateWithAllFields() {
         InputStateDTO dto = InputStateDTO.builder()
