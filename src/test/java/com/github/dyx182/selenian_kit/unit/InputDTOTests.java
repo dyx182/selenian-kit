@@ -28,22 +28,22 @@ public class InputDTOTests {
                 .ariaLabel("Username input field")
                 .build();
 
-        Assertions.assertTrue(dto.isDisplayed(), "isDisplayed should be true");
-        Assertions.assertEquals("sample text", dto.getText(), "text mismatch");
-        Assertions.assertEquals("input-123", dto.getId(), "id mismatch");
-        Assertions.assertEquals("#333333", dto.getColor(), "color mismatch");
-        Assertions.assertEquals("#ffffff", dto.getBackgroundColor(), "backgroundColor mismatch");
-        Assertions.assertEquals("#cccccc", dto.getBorderColor(), "borderColor mismatch");
-        Assertions.assertEquals(200, dto.getWidth(), "width mismatch");
-        Assertions.assertEquals(30, dto.getHeight(), "height mismatch");
-        Assertions.assertEquals(100, dto.getX(), "x coordinate mismatch");
-        Assertions.assertEquals(50, dto.getY(), "y coordinate mismatch");
-        Assertions.assertTrue(dto.isEnabled(), "isEnabled should be true");
-        Assertions.assertEquals("username", dto.getName(), "name mismatch");
-        Assertions.assertEquals("testuser", dto.getValue(), "value mismatch");
-        Assertions.assertEquals("Enter username", dto.getPlaceholder(), "placeholder mismatch");
-        Assertions.assertEquals("text", dto.getType(), "type mismatch");
-        Assertions.assertEquals("Username input field", dto.getAriaLabel(), "ariaLabel mismatch");
+        Assertions.assertTrue(dto.isDisplayed());
+        Assertions.assertEquals("sample text", dto.getText());
+        Assertions.assertEquals("input-123", dto.getId());
+        Assertions.assertEquals("#333333", dto.getColor());
+        Assertions.assertEquals("#ffffff", dto.getBackgroundColor());
+        Assertions.assertEquals("#cccccc", dto.getBorderColor());
+        Assertions.assertEquals(200, dto.getWidth());
+        Assertions.assertEquals(30, dto.getHeight());
+        Assertions.assertEquals(100, dto.getX());
+        Assertions.assertEquals(50, dto.getY());
+        Assertions.assertTrue(dto.isEnabled());
+        Assertions.assertEquals("username", dto.getName());
+        Assertions.assertEquals("testuser", dto.getValue());
+        Assertions.assertEquals("Enter username", dto.getPlaceholder());
+        Assertions.assertEquals("text", dto.getType());
+        Assertions.assertEquals("Username input field", dto.getAriaLabel());
     }
 
     @Test

@@ -36,18 +36,18 @@ public class CheckboxDTOTests {
                 .labelText("I accept the terms and conditions")
                 .build();
 
-        Assertions.assertTrue(dto.isDisplayed(), "isDisplayed should be true");
-        Assertions.assertEquals("Accept terms", dto.getText(), "text mismatch");
-        Assertions.assertEquals("terms-checkbox", dto.getId(), "id mismatch");
-        Assertions.assertEquals("#333333", dto.getColor(), "color mismatch");
-        Assertions.assertEquals("#ffffff", dto.getBackgroundColor(), "backgroundColor mismatch");
-        Assertions.assertEquals("#cccccc", dto.getBorderColor(), "borderColor mismatch");
-        Assertions.assertEquals(20, dto.getWidth(), "width mismatch");
-        Assertions.assertEquals(20, dto.getHeight(), "height mismatch");
-        Assertions.assertEquals(100, dto.getX(), "x coordinate mismatch");
-        Assertions.assertEquals(50, dto.getY(), "y coordinate mismatch");
-        Assertions.assertFalse(dto.isSelected(), "isSelected should be false");
-        Assertions.assertTrue(dto.isEnabled(), "isEnabled should be true");
+        Assertions.assertTrue(dto.isDisplayed());
+        Assertions.assertEquals("Accept terms", dto.getText());
+        Assertions.assertEquals("terms-checkbox", dto.getId());
+        Assertions.assertEquals("#333333", dto.getColor());
+        Assertions.assertEquals("#ffffff", dto.getBackgroundColor());
+        Assertions.assertEquals("#cccccc", dto.getBorderColor());
+        Assertions.assertEquals(20, dto.getWidth());
+        Assertions.assertEquals(20, dto.getHeight());
+        Assertions.assertEquals(100, dto.getX());
+        Assertions.assertEquals(50, dto.getY());
+        Assertions.assertFalse(dto.isSelected());
+        Assertions.assertTrue(dto.isEnabled());
         Assertions.assertEquals("agreement", dto.getName());
         Assertions.assertEquals("Accept terms and conditions", dto.getAriaLabel());
         Assertions.assertEquals("I accept the terms and conditions", dto.getLabelText());

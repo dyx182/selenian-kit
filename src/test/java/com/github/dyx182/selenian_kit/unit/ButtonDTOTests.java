@@ -27,22 +27,22 @@ public class ButtonDTOTests {
                 .form("registrationForm")
                 .build();
 
-        Assertions.assertTrue(dto.isDisplayed(), "isDisplayed should be true");
-        Assertions.assertEquals("Submit", dto.getText(), "text mismatch");
-        Assertions.assertEquals("submit-btn", dto.getId(), "id mismatch");
-        Assertions.assertEquals("#ffffff", dto.getColor(), "color mismatch");
-        Assertions.assertEquals("#007bff", dto.getBackgroundColor(), "backgroundColor mismatch");
-        Assertions.assertEquals("#0069d9", dto.getBorderColor(), "borderColor mismatch");
-        Assertions.assertEquals(120, dto.getWidth(), "width mismatch");
-        Assertions.assertEquals(40, dto.getHeight(), "height mismatch");
-        Assertions.assertEquals(50, dto.getX(), "x coordinate mismatch");
-        Assertions.assertEquals(100, dto.getY(), "y coordinate mismatch");
-        Assertions.assertTrue(dto.isEnabled(), "isEnabled should be true");
-        Assertions.assertEquals("submit", dto.getType(), "type mismatch");
-        Assertions.assertEquals("submitForm", dto.getName(), "name mismatch");
-        Assertions.assertEquals("Send", dto.getValue(), "value mismatch");
-        Assertions.assertEquals("Submit registration form", dto.getAriaLabel(), "ariaLabel mismatch");
-        Assertions.assertEquals("registrationForm", dto.getForm(), "form mismatch");
+        Assertions.assertTrue(dto.isDisplayed());
+        Assertions.assertEquals("Submit", dto.getText());
+        Assertions.assertEquals("submit-btn", dto.getId());
+        Assertions.assertEquals("#ffffff", dto.getColor());
+        Assertions.assertEquals("#007bff", dto.getBackgroundColor());
+        Assertions.assertEquals("#0069d9", dto.getBorderColor());
+        Assertions.assertEquals(120, dto.getWidth());
+        Assertions.assertEquals(40, dto.getHeight());
+        Assertions.assertEquals(50, dto.getX());
+        Assertions.assertEquals(100, dto.getY());
+        Assertions.assertTrue(dto.isEnabled());
+        Assertions.assertEquals("submit", dto.getType());
+        Assertions.assertEquals("submitForm", dto.getName());
+        Assertions.assertEquals("Send", dto.getValue());
+        Assertions.assertEquals("Submit registration form", dto.getAriaLabel());
+        Assertions.assertEquals("registrationForm", dto.getForm());
     }
 
     @Test
@@ -104,6 +104,6 @@ public class ButtonDTOTests {
                 .isEnabled(false)
                 .build();
 
-        Assertions.assertNotEquals(dto1, dto2, "DTOs with different values should not be equal");
+        Assertions.assertNotEquals(dto1, dto2);
     }
 }
