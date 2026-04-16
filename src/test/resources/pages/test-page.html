@@ -206,11 +206,14 @@
 
     <div class="section">
         <h2>5. Buttons</h2>
-        
-        <div class="field">
-            <label for="submitBtn">Submit Button:</label>
-            <button id="submitBtn" type="submit" name="submit" value="send">Submit Form</button>
-        </div>
+
+        <form id="registrationForm" action="/submit" method="post">
+            <div class="field">
+                <label for="registerBtn">Submit Button (inside form):</label>
+                <button id="registerBtn" type="submit" name="register" value="send"
+                        aria-label="Submit registration form">Register</button>
+            </div>
+        </form>
         
         <div class="field">
             <label for="buttonBtn">Regular Button:</label>

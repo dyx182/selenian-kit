@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class InputStateTests extends BaseIntegrationTests{
+public class InputStateTests extends BaseIntegrationTests {
 
     private final String path = getClass().getResource("/pages/test-page.html").toString();
 
@@ -17,13 +17,15 @@ public class InputStateTests extends BaseIntegrationTests{
         Selenide.open(path);
 
         InputStateDTO inputState = ElementState.input($x("//input[@id='textInput']"));
-//todo refactor to assertAll
-        Assertions.assertTrue(inputState.isEnabled());
-        Assertions.assertTrue(inputState.isDisplayed());
-        Assertions.assertEquals("username", inputState.getName());
-        Assertions.assertEquals("Enter username", inputState.getPlaceholder());
-        Assertions.assertEquals("text", inputState.getType());
-        Assertions.assertEquals("testuser", inputState.getValue());
+
+        Assertions.assertAll(
+                () -> Assertions.assertTrue(inputState.isEnabled()),
+                () -> Assertions.assertTrue(inputState.isDisplayed()),
+                () -> Assertions.assertEquals("username", inputState.getName()),
+                () -> Assertions.assertEquals("Enter username", inputState.getPlaceholder()),
+                () -> Assertions.assertEquals("text", inputState.getType()),
+                () -> Assertions.assertEquals("testuser", inputState.getValue())
+        );
     }
 
     @Test
