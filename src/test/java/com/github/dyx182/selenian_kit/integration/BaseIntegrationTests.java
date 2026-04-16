@@ -1,6 +1,8 @@
 package com.github.dyx182.selenian_kit.integration;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
 
@@ -10,10 +12,16 @@ public abstract class BaseIntegrationTests {
     static void setup() {
         Configuration.browser = "chrome";
         //gui
-        Configuration.headless = false;
+        Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;
         Configuration.screenshots = true;
         Configuration.reportsFolder = "target/screenshots";
+    }
+
+    @AfterAll
+    static void closeWebDriver() {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
     }
 }
