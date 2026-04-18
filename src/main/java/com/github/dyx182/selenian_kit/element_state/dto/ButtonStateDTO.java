@@ -13,5 +13,4 @@ public class ButtonStateDTO extends BaseElementStateDTO {
     String name;
     String value;
     String ariaLabel;
-    String form;
 }

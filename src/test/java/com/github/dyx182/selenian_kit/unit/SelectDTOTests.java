@@ -32,6 +32,7 @@ public class SelectDTOTests {
                 .options(options)
                 .selectedOption("USA")
                 .selectedOptions(selectedOptions)
+                .labelText("LabelText")
                 .build();
 
         Assertions.assertTrue(dto.isDisplayed());
@@ -42,6 +43,7 @@ public class SelectDTOTests {
         Assertions.assertEquals(options, dto.getOptions());
         Assertions.assertEquals("USA", dto.getSelectedOption());
         Assertions.assertEquals(selectedOptions, dto.getSelectedOptions());
+        Assertions.assertEquals("LabelText", dto.getLabelText());
     }
 
     @Test

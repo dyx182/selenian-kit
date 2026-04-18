@@ -15,6 +15,7 @@ public class BaseElementStateDTO {
     String color;
     String backgroundColor;
     String borderColor;
+    String labelText;
     int width;
     int height;
     int x;

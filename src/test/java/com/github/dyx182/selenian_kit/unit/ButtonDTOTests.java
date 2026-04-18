@@ -26,7 +26,7 @@ public class ButtonDTOTests {
                 .name("submitForm")
                 .value("Send")
                 .ariaLabel("Submit registration form")
-                .form("registrationForm")
+                .labelText("LabelText")
                 .build();
 
         Assertions.assertTrue(dto.isDisplayed());
@@ -44,7 +44,7 @@ public class ButtonDTOTests {
         Assertions.assertEquals("submitForm", dto.getName());
         Assertions.assertEquals("Send", dto.getValue());
         Assertions.assertEquals("Submit registration form", dto.getAriaLabel());
-        Assertions.assertEquals("registrationForm", dto.getForm());
+        Assertions.assertEquals("LabelText", dto.getLabelText());
     }
 
     @Test

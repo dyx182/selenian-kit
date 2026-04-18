@@ -3,6 +3,8 @@ package com.github.dyx182.selenian_kit.element_state;
 import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.selenian_kit.element_state.dto.ButtonStateDTO;
 
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
+
 class ButtonState {
 
     static ButtonStateDTO getState(SelenideElement button) {
@@ -22,7 +24,7 @@ class ButtonState {
                 .name(button.getAttribute("name"))
                 .value(button.getValue())
                 .ariaLabel(button.getAttribute("aria-label"))
-                .ariaLabel(button.getAttribute("form"))
+                .labelText(getLabelText(button))
                 .build();
     }
 }

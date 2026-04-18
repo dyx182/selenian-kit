@@ -3,7 +3,7 @@ package com.github.dyx182.selenian_kit.element_state;
 import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.selenian_kit.element_state.dto.SelectStateDTO;
 
-import java.util.List;
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
 
 class SelectState {
 
@@ -25,6 +25,7 @@ class SelectState {
                 .options(select.getOptions().texts())
                 .selectedOption(select.getSelectedOptionText())
                 .selectedOptions(select.getSelectedOptions().texts())
+                .labelText(getLabelText(select))
                 .build();
     }
 }

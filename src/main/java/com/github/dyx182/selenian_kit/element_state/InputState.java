@@ -3,6 +3,8 @@ package com.github.dyx182.selenian_kit.element_state;
 import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.selenian_kit.element_state.dto.InputStateDTO;
 
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
+
 class InputState {
 
     static InputStateDTO getState(SelenideElement textInput) {
@@ -23,6 +25,7 @@ class InputState {
                 .placeholder(textInput.getAttribute("placeholder"))
                 .type(textInput.getAttribute("type"))
                 .ariaLabel(textInput.getAttribute("aria-label"))
+                .labelText(getLabelText(textInput))
                 .build();
     }
 

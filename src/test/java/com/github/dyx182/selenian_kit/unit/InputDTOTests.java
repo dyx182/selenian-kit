@@ -26,6 +26,7 @@ public class InputDTOTests {
                 .placeholder("Enter username")
                 .type("text")
                 .ariaLabel("Username input field")
+                .labelText("LabelText")
                 .build();
 
         Assertions.assertTrue(dto.isDisplayed());
@@ -44,6 +45,7 @@ public class InputDTOTests {
         Assertions.assertEquals("Enter username", dto.getPlaceholder());
         Assertions.assertEquals("text", dto.getType());
         Assertions.assertEquals("Username input field", dto.getAriaLabel());
+        Assertions.assertEquals("LabelText", dto.getLabelText());
     }
 
     @Test

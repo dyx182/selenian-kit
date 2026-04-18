@@ -22,6 +22,7 @@ public class LinkStateDTOTests {
                 .target("_blank")
                 .ariaLabel("Go to example")
                 .title("Opens in new tab")
+                .labelText("LabelText")
                 .build();
 
         Assertions.assertTrue(dto.isDisplayed());
@@ -32,6 +33,7 @@ public class LinkStateDTOTests {
         Assertions.assertEquals("_blank", dto.getTarget());
         Assertions.assertEquals("Go to example", dto.getAriaLabel());
         Assertions.assertEquals("Opens in new tab", dto.getTitle());
+        Assertions.assertEquals("LabelText", dto.getLabelText());
     }
 
     @Test

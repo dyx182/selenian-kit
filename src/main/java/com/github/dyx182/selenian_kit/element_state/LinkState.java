@@ -3,6 +3,8 @@ package com.github.dyx182.selenian_kit.element_state;
 import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.selenian_kit.element_state.dto.LinkStateDTO;
 
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
+
 class LinkState {
 
     static LinkStateDTO getState(SelenideElement link) {
@@ -17,6 +19,7 @@ class LinkState {
                 .height(link.getSize().height)
                 .x(link.getLocation().x)
                 .y(link.getLocation().y)
+                .labelText(getLabelText(link))
                 .build();
     }
 }

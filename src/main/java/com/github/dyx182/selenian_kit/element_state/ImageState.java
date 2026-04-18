@@ -3,7 +3,7 @@ package com.github.dyx182.selenian_kit.element_state;
 import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.selenian_kit.element_state.dto.ImageStateDTO;
 
-import java.util.List;
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
 
 class ImageState {
 
@@ -23,6 +23,7 @@ class ImageState {
                 .alt(image.getAttribute("alt"))
                 .title(image.getAttribute("title"))
                 .ariaLabel(image.getAttribute("aria-label"))
+                .labelText(getLabelText(image))
                 .build();
     }
 }

@@ -23,6 +23,7 @@ public class ImageDTOTests {
                 .alt("Company Logo")
                 .title("Click to go home")
                 .ariaLabel("Main company logo")
+                .labelText("LabelText")
                 .build();
 
         Assertions.assertTrue(dto.isDisplayed());
@@ -39,6 +40,7 @@ public class ImageDTOTests {
         Assertions.assertEquals("Company Logo", dto.getAlt());
         Assertions.assertEquals("Click to go home", dto.getTitle());
         Assertions.assertEquals("Main company logo", dto.getAriaLabel());
+        Assertions.assertEquals("LabelText", dto.getLabelText());
     }
 
     @Test

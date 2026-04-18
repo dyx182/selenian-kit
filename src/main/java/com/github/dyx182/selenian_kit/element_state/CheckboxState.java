@@ -1,9 +1,9 @@
 package com.github.dyx182.selenian_kit.element_state;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.ex.ElementNotFound;
 import com.github.dyx182.selenian_kit.element_state.dto.CheckboxStateDTO;
+
+import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
 
 class CheckboxState {
 
@@ -25,16 +25,5 @@ class CheckboxState {
                 .y(checkbox.getLocation().y)
                 .labelText(getLabelText(checkbox))
                 .build();
-    }
-
-    private static String getLabelText(SelenideElement checkbox) {
-        String id = checkbox.getAttribute("id");
-        if (id != null) {
-            try {
-                return Selenide.$("label[for='" + id + "']").getText();
-            } catch (ElementNotFound e) {
-            }
-        }
-        return "";
     }
 }
