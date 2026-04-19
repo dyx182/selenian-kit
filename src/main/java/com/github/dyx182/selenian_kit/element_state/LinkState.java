@@ -19,7 +19,12 @@ class LinkState {
                 .height(link.getSize().height)
                 .x(link.getLocation().x)
                 .y(link.getLocation().y)
+                .isEnabled(link.isEnabled())
                 .labelText(getLabelText(link))
+                .href(link.getAttribute("href"))
+                .target(link.getAttribute("target"))
+                .ariaLabel(link.getAttribute("aria-label"))
+                .title(link.getAttribute("title"))
                 .build();
     }
 }

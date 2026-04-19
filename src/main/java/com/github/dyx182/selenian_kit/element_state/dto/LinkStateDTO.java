@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @EqualsAndHashCode(callSuper = true)
 public class LinkStateDTO extends BaseElementStateDTO{
+    boolean isEnabled;
     String href;
     String target;
     String ariaLabel;

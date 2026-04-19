@@ -61,110 +61,95 @@
 
     <div class="section">
         <h2>1. Input Fields</h2>
-        
+
         <div class="field">
             <label for="textInput">Text Input:</label>
-            <input type="text" id="textInput" name="username" 
+            <input type="text" id="textInput" name="username"
                    placeholder="Enter username" value="testuser">
         </div>
-        
+
         <div class="field">
             <label for="emailInput">Email Input:</label>
-            <input type="email" id="emailInput" name="email" 
+            <input type="email" id="emailInput" name="email"
                    placeholder="user@example.com" value="test@mail.com">
         </div>
-        
+
         <div class="field">
             <label for="passwordInput">Password Input:</label>
-            <input type="password" id="passwordInput" name="password" 
+            <input type="password" id="passwordInput" name="password"
                    placeholder="Enter password" value="secret123">
         </div>
-        
+
         <div class="field">
             <label for="numberInput">Number Input:</label>
-            <input type="number" id="numberInput" name="age" 
+            <input type="number" id="numberInput" name="age"
                    placeholder="Age" value="25" min="0" max="100">
         </div>
-        
+
         <div class="field">
             <label for="readonlyInput">Readonly Input:</label>
-            <input type="text" id="readonlyInput" name="readonly" 
+            <input type="text" id="readonlyInput" name="readonly"
                    value="readonly value" readonly>
         </div>
-        
+
         <div class="field">
             <label for="disabledInput">Disabled Input:</label>
-            <input type="text" id="disabledInput" name="disabled" 
+            <input type="text" id="disabledInput" name="disabled"
                    value="disabled field" disabled>
         </div>
-        
+
         <div class="field">
             <label for="requiredInput">Required Input:</label>
-            <input type="text" id="requiredInput" name="required" 
+            <input type="text" id="requiredInput" name="required"
                    required placeholder="This field is required">
         </div>
     </div>
 
     <div class="section">
         <h2>2. Checkboxes & Radio Buttons</h2>
-        
+
         <div class="field">
-            <label>Checkboxes:</label>
-            <input type="checkbox" id="checkboxUnchecked" name="newsletter" value="subscribe">
-            <label for="checkboxUnchecked">Subscribe to newsletter</label>
-        </div>
-        
-        <div class="field">
-            <label></label>
-            <input type="checkbox" id="checkboxChecked" name="terms" checked>
-            <label for="checkboxChecked">I accept terms and conditions</label>
-        </div>
-        
-        <div class="field">
-            <label></label>
-            <input type="checkbox" id="checkboxDisabled" name="disabledOpt" disabled>
-            <label for="checkboxDisabled">Disabled checkbox</label>
-        </div>
-        
-        <div class="field">
-            <label></label>
-            <input type="checkbox" id="checkboxRequired" name="requiredCheckbox" required>
-            <label for="checkboxRequired">Required checkbox <span style="color:red;">*</span></label>
-        </div>
-        
-        <div class="field">
-            <label>Radio Buttons:</label>
-            <input type="radio" id="radioMale" name="gender" value="male">
-            <label for="radioMale">Male</label>
-            
-            <input type="radio" id="radioFemale" name="gender" value="female" checked>
-            <label for="radioFemale">Female</label>
-            
-            <input type="radio" id="radioOther" name="gender" value="other">
-            <label for="radioOther">Other</label>
+            <label for="checkboxPrecedingLabel">Preceding sibling label:</label>
+            <input type="checkbox" id="checkboxPrecedingLabel" name="precedingLabel" aria-label="with aria-label">
         </div>
 
         <div class="field">
             <label>
                 <input type="checkbox" id="checkboxWrapped" name="wrapped">
-                Checkbox with wrapping label
+                Wrapping label text
             </label>
+        </div>
+
+        <div class="field">
+            <span>Preceding sibling span text</span>
+            <input type="checkbox" id="checkboxPrecedingSpan" name="precedingSpan">
+        </div>
+
+        <div class="field">
+            <input type="checkbox" id="checkboxFollowingSpan" name="followingSpan">
+            <span>Following sibling span text</span>
+        </div>
+
+        <div class="field">
+            <label>Radio example:</label>
+            <input type="radio" id="radioExample" name="example">
+            <label for="radioExample">Radio label text</label>
         </div>
     </div>
 
     <div class="section">
         <h2>3. Select Dropdowns</h2>
-        
+
         <div class="field">
             <label for="singleSelect">Single Select:</label>
-            <select id="singleSelect" name="country">
+            <select id="singleSelect" name="country" aria-label="Select country dropdown">
                 <option value="us">United States</option>
                 <option value="uk" selected>United Kingdom</option>
                 <option value="de">Germany</option>
                 <option value="fr">France</option>
             </select>
         </div>
-        
+
         <div class="field">
             <label for="multipleSelect">Multiple Select:</label>
             <select id="multipleSelect" name="colors" multiple size="4">
@@ -174,7 +159,7 @@
                 <option value="yellow">Yellow</option>
             </select>
         </div>
-        
+
         <div class="field">
             <label for="disabledSelect">Disabled Select:</label>
             <select id="disabledSelect" name="disabled" disabled>
@@ -186,18 +171,18 @@
 
     <div class="section">
         <h2>4. Textareas</h2>
-        
+
         <div class="field">
             <label for="simpleTextarea">Simple Textarea:</label>
-            <textarea id="simpleTextarea" name="comment" 
+            <textarea id="simpleTextarea" name="comment"
                       placeholder="Enter your comment">Default text</textarea>
         </div>
-        
+
         <div class="field">
             <label for="readonlyTextarea">Readonly Textarea:</label>
             <textarea id="readonlyTextarea" name="readonlyComment" readonly>This is readonly content</textarea>
         </div>
-        
+
         <div class="field">
             <label for="requiredTextarea">Required Textarea:</label>
             <textarea id="requiredTextarea" name="requiredComment" required></textarea>
@@ -214,36 +199,38 @@
                         aria-label="Submit registration form">Register</button>
             </div>
         </form>
-        
+
         <div class="field">
             <label for="buttonBtn">Regular Button:</label>
-            <button id="buttonBtn" type="button" name="clickMe">Click Me</button>
+            <button id="buttonBtn" type="button" name="clickMe"
+                    aria-label="Regular click button">Click Me</button>
         </div>
-        
+
         <div class="field">
             <label for="resetBtn">Reset Button:</label>
-            <button id="resetBtn" type="reset" name="reset">Reset</button>
+            <button id="resetBtn" type="reset" name="reset"
+                    aria-label="Reset form button">Reset</button>
         </div>
-        
+
         <div class="field">
             <label for="disabledBtn">Disabled Button:</label>
-            <button id="disabledBtn" type="button" disabled>Disabled</button>
+            <button id="disabledBtn" type="button" disabled
+                    aria-label="Disabled button example">Disabled</button>
         </div>
-    </div>
 
     <div class="section">
         <h2>6. Links</h2>
-        
+
         <div class="field">
             <label for="internalLink">Internal Link:</label>
-            <a id="internalLink" href="#section1">Go to Section 1</a>
+            <a id="internalLink" href="#section1" target="_self" aria-label="Navigate to section 1" title="Click to go to Section 1">Go to Section 1</a>
         </div>
-        
+
         <div class="field">
             <label for="externalLink">External Link:</label>
             <a id="externalLink" href="https://example.com" target="_blank">Open Example</a>
         </div>
-        
+
         <div class="field">
             <label for="linkWithTitle">Link with Title:</label>
             <a id="linkWithTitle" href="#" title="Tooltip text">Hover me</a>
@@ -252,13 +239,13 @@
 
     <div class="section">
         <h2>7. Images</h2>
-        
+
         <div class="field">
             <label>Valid Image:</label>
-            <img id="validImage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50'%3E%3Crect width='100' height='50' fill='blue'/%3E%3Ctext x='10' y='30' fill='white'%3ETest%3C/text%3E%3C/svg%3E" 
-                 alt="Test Image" title="This is a test image">
+            <img id="validImage" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50'%3E%3Crect width='100' height='50' fill='blue'/%3E%3Ctext x='10' y='30' fill='white'%3ETest%3C/text%3E%3C/svg%3E"
+                 alt="Test Image" title="This is a test image" aria-label="Valid test image for accessibility">
         </div>
-        
+
         <div class="field">
             <label>Image with no alt:</label>
             <img id="imageNoAlt" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='50'%3E%3Crect width='100' height='50' fill='red'/%3E%3C/svg%3E">
@@ -267,10 +254,10 @@
 
     <div class="section">
         <h2>8. Custom Attributes</h2>
-        
+
         <div class="field">
             <label for="customElement">Custom Data Attributes:</label>
-            <input type="text" id="customElement" name="custom" 
+            <input type="text" id="customElement" name="custom"
                    data-testid="custom-test-id"
                    data-qa="custom-qa"
                    data-role="test-input"

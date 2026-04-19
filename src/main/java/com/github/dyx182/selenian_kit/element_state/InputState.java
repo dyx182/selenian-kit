@@ -28,5 +28,4 @@ class InputState {
                 .labelText(getLabelText(textInput))
                 .build();
     }
-
 }
