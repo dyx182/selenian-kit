@@ -20,8 +20,8 @@ public class LinkIntegrationTests extends BaseIntegrationTests {
 
         Assertions.assertAll(
                 () -> Assertions.assertTrue(linkState.isDisplayed(), "isDisplayed should be true"),
-                () -> Assertions.assertEquals("file:///C:/Users/Artem/IdeaProjects/selenian-kit/target/test-classes/pages/test-page.html#section1",
-                        linkState.getHref(), "href mismatch"),
+                () -> Assertions.assertTrue(linkState.getHref().endsWith("#section1"),
+                        "href should end with #section1, but was: " + linkState.getHref()),
                 () -> Assertions.assertEquals("_self", linkState.getTarget(), "target mismatch"),
                 () -> Assertions.assertEquals("Navigate to section 1", linkState.getAriaLabel(), "ariaLabel mismatch"),
                 () -> Assertions.assertEquals("Click to go to Section 1", linkState.getTitle(), "title mismatch"),
