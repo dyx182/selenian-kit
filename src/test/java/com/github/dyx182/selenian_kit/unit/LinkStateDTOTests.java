@@ -1,6 +1,6 @@
 package com.github.dyx182.selenian_kit.unit;
 
-import com.github.dyx182.selenian_kit.element_state.dto.LinkStateDTO;
+import com.github.dyx182.state_kit.element_state.dto.LinkStateDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

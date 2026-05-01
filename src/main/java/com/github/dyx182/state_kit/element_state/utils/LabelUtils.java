@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.element_state.utils;
+package com.github.dyx182.state_kit.element_state.utils;
 
 import com.codeborne.selenide.SelenideElement;
 

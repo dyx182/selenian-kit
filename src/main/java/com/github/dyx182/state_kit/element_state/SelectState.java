@@ -1,9 +1,9 @@
-package com.github.dyx182.selenian_kit.element_state;
+package com.github.dyx182.state_kit.element_state;
 
 import com.codeborne.selenide.SelenideElement;
-import com.github.dyx182.selenian_kit.element_state.dto.SelectStateDTO;
+import com.github.dyx182.state_kit.element_state.dto.SelectStateDTO;
 
-import static com.github.dyx182.selenian_kit.element_state.utils.LabelUtils.getLabelText;
+import static com.github.dyx182.state_kit.element_state.utils.LabelUtils.getLabelText;
 
 class SelectState {
 

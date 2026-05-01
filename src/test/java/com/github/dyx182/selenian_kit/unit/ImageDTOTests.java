@@ -1,6 +1,6 @@
 package com.github.dyx182.selenian_kit.unit;
 
-import com.github.dyx182.selenian_kit.element_state.dto.ImageStateDTO;
+import com.github.dyx182.state_kit.element_state.dto.ImageStateDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

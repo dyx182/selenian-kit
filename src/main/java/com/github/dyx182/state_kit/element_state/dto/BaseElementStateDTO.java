@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.element_state.dto;
+package com.github.dyx182.state_kit.element_state.dto;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

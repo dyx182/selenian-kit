@@ -1,6 +1,6 @@
 package com.github.dyx182.selenian_kit.unit;
 
-import com.github.dyx182.selenian_kit.element_state.dto.ButtonStateDTO;
+import com.github.dyx182.state_kit.element_state.dto.ButtonStateDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

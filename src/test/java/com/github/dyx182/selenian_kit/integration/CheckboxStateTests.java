@@ -1,8 +1,8 @@
 package com.github.dyx182.selenian_kit.integration;
 
 import com.codeborne.selenide.Selenide;
-import com.github.dyx182.selenian_kit.element_state.ElementState;
-import com.github.dyx182.selenian_kit.element_state.dto.CheckboxStateDTO;
+import com.github.dyx182.state_kit.element_state.ElementState;
+import com.github.dyx182.state_kit.element_state.dto.CheckboxStateDTO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
