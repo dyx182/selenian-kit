@@ -1,7 +1,6 @@
 package com.github.dyx182.state_kit.element_state;
 
 import com.codeborne.selenide.SelenideElement;
-import com.github.dyx182.selenian_kit.element_state.dto.*;
 import com.github.dyx182.state_kit.element_state.dto.*;
 
 
