@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.integration;
+package com.github.dyx182.state_kit.integration;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;

@@ -1,4 +1,4 @@
-package com.github.dyx182.selenian_kit.integration;
+package com.github.dyx182.state_kit.integration;
 
 import com.codeborne.selenide.Selenide;
 import com.github.dyx182.state_kit.element_state.ElementState;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class SelectStateTests extends BaseIntegrationTests {
+public class SelectIntegrationTests extends BaseIntegrationTests {
 
     private final String path = getClass().getResource("/pages/test-page.html").toString();
 
