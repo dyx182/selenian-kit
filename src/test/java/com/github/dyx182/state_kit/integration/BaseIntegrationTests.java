@@ -11,7 +11,6 @@ public abstract class BaseIntegrationTests {
     @BeforeAll
     static void setup() {
         Configuration.browser = "chrome";
-        //gui
         Configuration.headless = true;
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10000;

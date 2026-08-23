@@ -27,4 +27,7 @@ class LinkState {
                 .title(link.getAttribute("title"))
                 .build();
     }
+
+    public static class ListState {
+    }
 }
