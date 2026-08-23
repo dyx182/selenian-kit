@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import com.github.dyx182.state_kit.element_state.dto.*;
 
 
-public class ElementState {
+public final class ElementState {
 
     private ElementState() {
     }
@@ -31,5 +31,8 @@ public class ElementState {
 
     public static SelectStateDTO select(SelenideElement element) {
         return SelectState.getState(element);
+    }
+
+    public static final class collection {
     }
 }
