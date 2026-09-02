@@ -1,21 +1,36 @@
 package com.github.dyx182.state_kit.element_state.utils;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class LabelUtils {
 
-    private LabelUtils() {}
+    private static final List<String> LABEL_XPATHS = Arrays.asList(
+            "./preceding-sibling::label",
+            "./parent::label",
+            "./preceding-sibling::span",
+            "./following-sibling::span"
+    );
 
+    private LabelUtils() {
+    }
+
+    /**
+     * Возвращает текст подписи элемента (label/span) или пустую строку, если подпись не найдена.
+     */
     public static String getLabelText(SelenideElement element) {
-//todo add exception
-        if (element.$x("./preceding-sibling::label").exists() && !element.$x("./preceding-sibling::label").getText().isEmpty()) {
-            return element.$x("./preceding-sibling::label").getText();
-        } else if (element.$x("./parent::label").exists() && !element.$x("./parent::label" ).getText().isEmpty()) {
-            return element.$x("./parent::label").getText();
-        } else if (element.$x("./preceding-sibling::span").exists() && !element.$x("./preceding-sibling::span").getText().isEmpty()) {
-            return element.$x("./preceding-sibling::span").getText();
-        } else if (element.$x("./following-sibling::span").exists() && !element.$x("./following-sibling::span").getText().isEmpty()) {
-            return element.$x("./following-sibling::span").getText();
+        for (String xpath : LABEL_XPATHS) {
+            List<WebElement> nodes = element.findElements(By.xpath(xpath));
+            if (!nodes.isEmpty()) {
+                String text = nodes.get(0).getText();
+                if (text != null && !text.isEmpty()) {
+                    return text;
+                }
+            }
         }
         return "";
     }
